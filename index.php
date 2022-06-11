@@ -49,23 +49,23 @@
 // create_model_2(5);
 
 // ----------------------------
-$n = 1;
-while ($n <= 12) {
-    if ($n <= 6) {
+// $n = 1;
+// while ($n <= 12) {
+//     if ($n <= 6) {
 
-        for ($i=1; $i <= $n; $i++) { 
-            echo ' * ';
-        }
-       echo "<br/>";
-    }elseif ($n > 6) {
-        for ($j=13-$n; $j >= 1; $j--) { 
-            echo ' * ';
-        }
-       echo "<br/>";
-    }
-    $n++;
+//         for ($i=1; $i <= $n; $i++) { 
+//             echo ' * ';
+//         }
+//        echo "<br/>";
+//     }elseif ($n > 6) {
+//         for ($j=13-$n; $j >= 1; $j--) { 
+//             echo ' * ';
+//         }
+//        echo "<br/>";
+//     }
+//     $n++;
   
-}
+// }
 
 // --------------EXO5---------------
 
@@ -77,6 +77,47 @@ while ($n <= 12) {
     // }
     
     // echo "factoriel de " .$n. " est: " .$fac;
+
+    // --------------EXO9--------------
+
+    ?>
+
+    <div style="width: 160px; height: 120px; border: 1px solid black">
+    <?php for ($i=1; $i <= 8 ; $i++) {
+        
+        if ($i % 2 != 0) {
+            for ($j=1; $j <= 8; $j++) { 
+                if ($j % 2 === 0) {
+                    
+                   echo "<div style='background:white; height: 15px; width: 20px; display: inline-block'></div>";
+                 
+                }
+                else{
+                    echo "<div style='background:black; height: 15px; width: 20px;display: inline-block'></div>";
+                }
+                
+            }
+
+        } else{
+            for ($j=1; $j <= 8; $j++) { 
+                if ($j % 2 === 0) {
+                    
+                   echo "<div style='background:black; height: 15px; width: 20px; display: inline-block'></div>";
+                 
+                }
+                else{
+                    echo "<div style='background:white; height: 15px; width: 20px;display: inline-block'></div>";
+                }
+                
+            }
+        }
+        
+        echo '<br/>';
+    } ?>         
+
+    </div>
+
+
 
 // --------------FUNC-EXO1---------------
 //  function factoriel($n){
